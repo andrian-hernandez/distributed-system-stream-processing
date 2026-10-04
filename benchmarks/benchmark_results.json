@@ -1,0 +1,91 @@
+{
+  "benchmark": "Distributed System Stream Processing & Cache Optimization",
+  "status": "completed",
+  "cache": {
+    "operations": 1000,
+    "elapsed_ms": 0.976,
+    "average_operation_ms": 0.000976,
+    "l1_hits": 999,
+    "l1_misses": 1,
+    "l2_hits": 0,
+    "l2_misses": 1,
+    "source_loads": 1,
+    "redis_errors": 0,
+    "source_loader_calls": 1
+  },
+  "partition_rebalancing": {
+    "partition_count": 24,
+    "node_count": 4,
+    "before_loads": {
+      "node-a": 18,
+      "node-b": 2,
+      "node-c": 1,
+      "node-d": 3
+    },
+    "before_ownership_valid": true,
+    "before_balanced": false,
+    "after_ownership": {
+      "node-a": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "node-b": [
+        1,
+        5,
+        9,
+        13,
+        17,
+        21
+      ],
+      "node-c": [
+        2,
+        6,
+        10,
+        14,
+        18,
+        22
+      ],
+      "node-d": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        23
+      ]
+    },
+    "after_loads": {
+      "node-a": 6,
+      "node-b": 6,
+      "node-c": 6,
+      "node-d": 6
+    },
+    "after_ownership_valid": true,
+    "after_balanced": true,
+    "rebalance_elapsed_ms": 0.028
+  },
+  "streaming": {
+    "published_events": 1000,
+    "processed_events": 1000,
+    "failed_events": 0,
+    "partition_count": 4,
+    "publish_elapsed_ms": 2.906,
+    "process_elapsed_ms": 2.59,
+    "total_elapsed_ms": 5.496,
+    "events_per_second": 181963.75,
+    "latency_statistics": {
+      "count": 1000,
+      "average_ms": 8.71,
+      "p95_ms": 12.947,
+      "sla_ms": 1000,
+      "sla_passed": true
+    },
+    "latency_min_ms": 3.762,
+    "latency_max_ms": 14.813,
+    "latency_mean_ms": 8.71
+  }
+}
